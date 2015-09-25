@@ -9,7 +9,7 @@ Do it yourself Line Follwer Robot Android App Guide
 
 ### View Section
 
-![view1]('/sceeenshots/view1.png')
+![view1]('/screenshots/view1.png')
 
 ![view2]('/screenshots/view2.png')
 
