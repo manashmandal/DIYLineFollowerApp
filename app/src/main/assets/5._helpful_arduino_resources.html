@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>1. PREREQUISITE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+
+					<h1> 5. HELPFUL ARDUINO RESOURCES </h1>
+
+					<p></p>
+
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+
+							<header class="major">
+								<h2>A Few Helpful Arduino Resources</h2>
+							</header>
+							
+                    
+                    
+            
+        
+        <p> - BE SURE TO CHECK THESE OUT - these are really fantastic learning sources! </p>
+
+<p> 1. http://arduino.cc/en/Main/Products - it is very important that you thoroughly understand your Arduino --learn all about your particular Arduino board here!
+        </p> <p>
+    2. http://learn.adafruit.com/category/learn-arduino - absolute beginner tutorials--very fantastic website and information!
+        </p> <p>
+        
+        3. http://arduino.cc/en/Tutorial/HomePage - hundreds of beginner tutorials and examples
+        </p> <p>
+        
+        4. http://arduino.cc/en/Reference/HomePage - Arduino reference page -- you will come here often!  If you aren't regularly referencing these pages, you should be!  You can also find the entire Arduino Reference right on your computer by going to Help --> Reference right inside the Arduino IDE (Integrated Development Environment).  This is SUPER useful when working offline. 
+        </p> <p>
+        
+        5. http://forum.arduino.cc/ - the Arduino forum - ask your questions and get help here 6. Programming Arduino Getting Started with Sketches, By Simon Monk, $8.48 - GREAT BOOK; also teaches the basics of writing your own Arduino libraries. 
+        </p>
+        
+        <h1>    Intermediate: </h1>
+        
+         <p>
+        
+1. Programming Arduino Next Steps: Going Further with Sketches, By Simon Monk, $12.89 GREAT BOOK; among many other things, teaches some more advanced input/output and signal processing techniques for Arduino, as well as how to write your own Arduino libraries. 
+             </p> <p>
+             
+             2. http://playground.arduino.cc/Main/LibraryList - hundreds of user-contributed Arduino Libraries to expand what you can do with your Arduino! 
+        
+        </p> <p>
+        
+        3. http://playground.arduino.cc//Main/InterfacingWithHardware - tons of user-contributed code and examples to interface with hardware
+        
+        </p> <p>
+        
+        4. http://playground.arduino.cc//Main/InterfacingWithSoftware - tons of user-contributed code and examples to interface with software (including data-logging and plotting, live data display, controlling your Arduino via a GUI on your computer, etc) 
+        
+        </p> <p>
+        
+        5. http://www.cplusplus.com/ - Arduino is based on C/C++.  As you become an intermediate user, you need to know that you are NOT limited just to the functions on the main Arduino Reference page.  Rather, you have access to nearly *any* standard C/C++ function.
+        
+        </p> <p>
+        
+        6. http://www.nongnu.org/avr-libc/user-manual/modules.html -  AVR Libc reference pages - This link contains a list of all of the C functions (organized by header files, .h files) that are available for use on ATmega microcontrollers/Arduino!  
+        </p> <p>
+        
+        1. For a real description, & examples, of how to use one of these functions, however, I recommend simply Googling the function name you want, as follows: ex: I want to know how to use "scanf," so I Google "scanf c", and the first link that pops up is this: http://www.cplusplus.com/reference/cstdio/scanf/. 
+        </p> <p>
+        
+        1. Or, let's say I don't know that "scanf" exists, but I want to know how to read parts of a string, out of a string.  So, I Google "c read parts of a string", and the first link I find is this: http://bytes.com/topic/c/answers/221802-how-readpart-string.  Now, I read their code and see that "scanf" is used in their code, so I can either look for the reference page for this function on Cplusplus.com directly, *or* I can Google "scanf c", as described above, to find a good reference page describing it in detail.
+        </p> <p>
+        
+        2. Alternatively, you can simply go directly to http://www.cplusplus.com/, or other similar C/C++ websites, and search for the function you want to use.  Again, an Arduino can use virtually any C/C++ function, since that's what its language is based on!
+        </p> <p>
+        
+        3. If any C/C+ function you find does *not* work on Arduino, or acts strangely, however, go back to reference the AVR-libc pages, as AVR-libc is what actually implements the C/C++ language for Atmel's AVR microcontrollers, and not 100% of the functions are implemented. Some deviations may exist. Therefore, some things on cplusplus.com, for example, might not work on the Arduino, but everything in AVR-libc will! 
+        
+        </p> <p>
+        
+        7. Learn to write macros, for example, in place of very short functions or repeated operations. Macros are very useful, and you should probably begin to learn to understand
+and use them as an intermediate programmer. 
+        </p> <p>
+        
+        See the top of the "Expert" section below for more information and links. Many of the Arduino "functions," as shown on the Arduino Reference page are actually precompiler operations, in the form of macros in this case, rather than true functions.  Macros are basically just textual substitutions in your code, and they get substituted into your code by the precompiler *before* the compiler interprets and converts your C code.
+        
+        </p> 
+        
+        <h1>  Advanced: </h1>
+        
+         <p>
+1. By Ken Shirriff: 1. http://www.righto.com/2009/07/secrets-of-arduino-pwm.html - an absolutely FANTASTIC article on the intricacies of controlling the low-level PWM capabilities of an AVR microcontroller on an Arduino
+             </p> <p>
+             
+             2. By Nick Gammon: 1. http://gammon.com.au/interrupts - an IMMENSELY USEFUL and well-written article, by Nick Gammon, on AVR microcontroller interrupts 2. http://www.gammon.com.au/forum/?id=11504 - another EXTREMELY USEFUL article by Nick Gammon, on AVR microcontroller timers and counters
+        
+        </p> <p>
+        3. http://www.gammon.com.au/forum/?id=11497 - Power saving techniques for microprocessors - very useful if you want your Arduino project to run for a very long time, on battery power, utilizing sleep modes, without a voltage regulator, etc etc. 
+        
+        </p> <p>
+        
+        3. http://playground.arduino.cc/Main/TimerPWMCheatsheet - excellent info. to help you modify your Arduino PWM output frequencies quickly
+        
+        </p> <p>
+        4. ATmega328 Datasheet: 1. http://www.atmel.com/Images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A48PA-88A-88PA-168A-168PA-328-328P_datasheet.pdf - this is the 660 pg. datasheet of the Atmel ATmega 328 microcontroller, used by most Arduinos -- this is an absolutely ESSENTIAL document if you plan on doing low-level Arduino microcontroller programming, including direct manipulation of its timers, ports, registers and things 1. Find the main ATmega 328 webpage here:  http://www.atmel.com/devices/atmega328p.aspx 
+        
+        </p> <p>
+        
+        5. By Mikal Hart : 1. http://arduiniana.org/ - Arduiniana - Arduino wisdom and gems by Mikal Hart 6. http://yourduino.com/sunshop2/ and http://arduino-info.wikispaces.com/ - I have found a lot of good, useful info here.
+        </p> 
+        
+        <h1>    Expert: </h1>
+<p>   1. Learn to use the C Preprocessor, and write Macros (writing macros is a very important skill, as many of the core Arduino "functions," such as lowByte(), highByte(), bitWrite(), etc, are actually macros). 
+    
+    </p> <p>
+    1. The following macros are defined in "Arduino.h" (found on your hard drive at
+Arduino\hardware\arduino\avr\cores\arduino\Arduino.h), for example: 1. #define lowByte(w) ((uint8_t) ((w) & 0xff)) 
+        </p> <p>
+        
+        2. #define highByte(w) ((uint8_t) ((w) >> 8))
+        </p> <p>
+        
+        3. #define bitRead(value, bit) (((value) >> (bit)) & 0x01)
+        
+        </p> <p>
+        4. #define bitSet(value, bit) ((value) |= (1UL << (bit))) 
+        
+        </p> <p>
+        5. #define bitClear(value, bit) ((value) &= ~(1UL << (bit)))
+        </p> <p>
+        
+        6. #define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit)) 
+        
+        </p> <p>
+        
+        </p> <p>
+        2. The C (& C++) Preprocessor (and Macros) tutorial 
+        </p> <p>
+        1. http://www.cprogramming.com/tutorial/cpreprocessor.html 
+        </p> <p>
+        3. C Preprocessor Directives 1. http://www.cprogramming.com/reference/preprocessor/ 
+        </p> <p>
+        2. Arduino Core Library C/C++ Soure Code - Learn to answer your own questions about how Arduino works by reading its C/C++ Source Code for yourself! 
+        
+        </p> <p>
+        
+        1. View it on your hard drive, in the Arduino installation directory. 2. View it on GitHub here: https://github.com/arduino/Arduino - use the search box at the top to search the Arduino source code repository, which is very useful to find the definition of various macros or functions you are looking for, since it searches *inside* the files too, not just the file names! 
+        
+        </p> <p>
+        
+        3. Compiler Optimization settings: learn to change the GCC compiler optimization settings to optimize your compiled C/C++-to-Assembly-code for compiled size vs run-time speed, etc. 
+        
+        </p> <p>
+        1. Instructables.com: Arduino IDE 1.6.x compiler optimisations = faster code, by Bodmer 
+        </p> <p>
+        
+        2. https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html
+        
+        </p> <p>
+        
+        3. https://gcc.gnu.org/onlinedocs/gnat_ugn/Optimization-Levels.html
+        </p> <p>
+        
+        4. http://www.rapidtables.com/code/linux/gcc/gcc-o.htm
+        </p> <p>
+        
+        
+        4. Use #pragma GCC optimize ("-O2"), for example, at the top of your code to change optimization level without having to edit the Arduino platform.txt file (which was described on the Instructable above) - https://gcc.gnu.org/onlinedocs/gcc4.8.4/gcc/Function-Specific-Option-Pragmas.html 
+        </p> <p>
+        
+        
+        5. Learn how to use gcc Attributes (ex: "__attribute__ ((aligned (4)));", "__attribute__ ((__packed__)))", etc.
+        
+        </p> <p>
+        1. Function Attributes 2. Variable Attributes 3. Type Attributes 6. Structure Packing & Data Alignment 1. http://stackoverflow.com/questions/30038172/adding-unused-elements-to-c-cstructure-speeds-up-and-slows-down-code-executio - links & general info; also info on Data Alignment in the answer by Collin Dauphinee.
+        
+        
+        </p> <p>
+        
+2. http://www.catb.org/esr/structure-packing/ - Structure Packing 3. http://www.songho.ca/misc/alignment/dataalign.html - Data Alignment
+        
+        </p> <p>
+        
+        7. Writing efficient C code for an 8-bit Atmel AVR Microcontroller 1. AVR035 Efficient C Coding for AVR - doc1497 2. AVR4027 Tips and Tricks to Optimize Your C Code for 8-bit AVR Microcontrollers doc8453 -  8. Viewing Arduino C/C++ "disassembled" (Assembly language) code 1. http://rcarduino.blogspot.com/2012/09/how-to-view-arduino-assembly.html 2. http://stackoverflow.com/questions/919781/how-can-i-get-an-assembly-languagelisting-of-my-arduino-sketches-on-windows
+        
+        </p> 
+        
+        
+        <h1> A Few Great Arduino Libraries Worth Mentioning: </h1>
+        
+         <p>
+1. Arduino Playground:  1. Libraries: (Main Arduino user-contributed library list--this link copied from above under the "Intermediate" links): 
+             </p> <p>
+             
+             http://playground.arduino.cc/Main/LibraryList 
+        </p> <p>
+        2. Snippets And Sketches for Arduino: http://playground.arduino.cc/Main/SketchList 
+        
+        </p> <p>
+         3. By Ken Shirriff: 1. Arduino-IRremote - http://www.righto.com/2009/08/multi-protocol-infrared-remotelibrary.html 
+        
+        </p> <p>
+        
+        4. By Mikal Hart: 1. http://arduiniana.org/ - see his libraries list in the right-hand pane 
+        </p> <p>
+        
+        5. By Duane B: 1. http://rcarduino.blogspot.com/2012/10/arduino-serial-servos-20-servos-4pins.html - he has some great servo code snippets and libraries for the advanced user. For example: control 20 servos using only 4 pins and 2 x 4017 dirt-cheap decade counter IC chips. 1. Base code on his website: http://rcarduino.blogspot.com/2012/08/arduinoserial-servos.html  
+        
+        </p> <p>
+        
+        6. Also look for anything by Adafruit/LadyAda (Limor Fried) and Simon Monk, of course. 1. Adafruit provides code and libraries for nearly every single product they sell. They are one of the #1 supporters of Arduino in the world, and they are US-based! 
+        
+        </p> <p>
+        7. Sparkfun can be a good resource too--also US-based!
+        
+        </p> <p>
+Other Inspiring Links: TED Talk - Massimo Banzi (the primary founder of Arduino) - How Arduino is Open
+
+</p>
+        
+ 
+
+
+				</div>
+			</section>
+
+
+
+
+        
+      
+
+
+		<!-- Footer -->
+			<section id="footer">
+
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

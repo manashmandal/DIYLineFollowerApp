@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DIY Line Following Robot</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="topLevelOptions">
+        <item>1. Before you Begin</item>
+        <item>2. Introduction to Arduino</item>
+        <item>3. Introduction to Sensors</item>
+        <item>4. Line Following Robot</item>
+        <item>5. Take A Quiz!</item>
+    </string-array>
+
+    <string name="title_activity_before_you_begin">1. Before You Begin</string>
+    <string name="title_activity_before_you_begin_view">BeforeYouBeginViewActivity</string>
+    <string name="prerequisite">1. Prerequisite</string>
+    <string name="title_activity_arduino_category">ArduinoCategoryActivity</string>
+    <string name="title_activity_arduino_view">ArduinoView</string>
+    <string name="title_activity_sensor_view">SensorViewActivity</string>
+    <string name="title_activity_lfrview">LFRViewActivity</string>
+    <string name="about">About Me</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+
+    <string-array name="question3options">
+        <item>analogWrite(13, HIGH);</item>
+        <item>digitalWrite(10);</item>
+        <item>analogRead(A5);</item>
+        <item>Serial->println("Hello world");</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,305 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:15.0pt;
+	font-family:"Georgia","serif";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light","sans-serif";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light","sans-serif";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light","sans-serif";
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light","sans-serif";
+	letter-spacing:-.5pt;}
+span.MsoSubtleEmphasis
+	{color:#404040;
+	font-style:italic;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light","sans-serif";
+	letter-spacing:-.5pt;}
+span.keyword
+	{mso-style-name:keyword;}
+span.comment
+	{mso-style-name:comment;}
+span.datatypes
+	{mso-style-name:datatypes;}
+.MsoChpDefault
+	{font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoTitle>DIFFERENTIAL DRIVE FULL CODE</p>
+
+<p class=MsoNormal><span class=MsoSubtleEmphasis>Just add this function to your
+LineFollower.cpp from PD Code</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:.25in;margin-right:0in'>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><b><span style='font-size:11.0pt;font-family:
+     Consolas;color:#006699'>void</span></b><span style='font-size:11.0pt;
+     font-family:Consolas;color:black'>&nbsp;ppLineFollow&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>{&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:#008200'>//&nbsp;&nbsp;update_reading();</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;read_line();&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:#008200'>//&nbsp;println(100,&nbsp;3000);</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:11.0pt;
+     font-family:Consolas;color:#008200'>//sensor_weighted_value&nbsp;=&nbsp;new&nbsp;unsigned&nbsp;long&nbsp;int&nbsp;[getSensorNumber()];</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:seagreen'>long</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:seagreen'>int</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;weighted_values&nbsp;=&nbsp;0;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:seagreen'>long</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:seagreen'>int</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;total_values&nbsp;=&nbsp;0;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:
+     11.0pt;font-family:Consolas;color:seagreen'>int</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;calibrated_pos&nbsp;=&nbsp;0;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:
+     11.0pt;font-family:Consolas;color:#006699'>for</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;(</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:seagreen'>int</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;getSensorNumber();&nbsp;i++){&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;weighted_values&nbsp;+=&nbsp;line[i]&nbsp;*&nbsp;i&nbsp;*&nbsp;1000;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;total_values&nbsp;=&nbsp;active_sensors;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:#008200'>//&nbsp;Serial.println(weighted_values);</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:#008200'>//&nbsp;Serial.println(total_values);</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;calibrated_pos&nbsp;=&nbsp;weighted_values&nbsp;/&nbsp;total_values;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:#008200'>//&nbsp;&nbsp;return&nbsp;calibrated_pos;</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span><span style='font-size:11.0pt;font-family:
+     Consolas;color:#008200'>//&nbsp;Calculate&nbsp;calibrated&nbsp;position&nbsp;and&nbsp;experiment&nbsp;for&nbsp;which&nbsp;value&nbsp;speed&nbsp;needs&nbsp;to&nbsp;be&nbsp;changed&nbsp;by&nbsp;how&nbsp;much</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span><b><span style='font-size:11.0pt;
+     font-family:Consolas;color:#006699'>if</span></b><span style='font-size:
+     11.0pt;font-family:Consolas;color:black'>&nbsp;(calibrated_pos&nbsp;&gt;=&nbsp;3000&nbsp;&amp;&amp;&nbsp;calibrated_pos&nbsp;&lt;=&nbsp;4000){&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;motor(forward,&nbsp;150,&nbsp;forward,&nbsp;150);&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span><b><span style='font-size:11.0pt;
+     font-family:Consolas;color:#006699'>else</span></b><span style='font-size:
+     11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:#006699'>if</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;(calibrated_pos&nbsp;&gt;=&nbsp;2000&nbsp;&amp;&amp;&nbsp;calibrated_pos&nbsp;&lt;&nbsp;3000){&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;motor(forward,&nbsp;140,&nbsp;forward,&nbsp;160);&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span><b><span style='font-size:11.0pt;
+     font-family:Consolas;color:#006699'>else</span></b><span style='font-size:
+     11.0pt;font-family:Consolas;color:black'>&nbsp;</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:#006699'>if</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;(calibrated_pos&nbsp;&gt;=&nbsp;1000&nbsp;&amp;&amp;&nbsp;calibrated_pos&nbsp;&lt;&nbsp;2000){&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;motor&nbsp;(backward,&nbsp;140,&nbsp;forward,&nbsp;150);&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span><b><span style='font-size:11.0pt;
+     font-family:Consolas;color:#006699'>else</span></b><span style='font-size:
+     11.0pt;font-family:Consolas;color:black'>&nbsp;</span><b><span
+     style='font-size:11.0pt;font-family:Consolas;color:#006699'>if</span></b><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;(calibrated_pos&nbsp;&gt;&nbsp;4000&nbsp;&amp;&amp;&nbsp;calibrated_pos&nbsp;&lt;=&nbsp;5000){&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;motor&nbsp;(forward,&nbsp;150,&nbsp;backward,&nbsp;140);&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;</span><b><span style='font-size:11.0pt;
+     font-family:Consolas;color:#006699'>else</span></b><span style='font-size:
+     11.0pt;font-family:Consolas;color:black'>&nbsp;Stop();&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:#008200'>//&nbsp;&nbsp;Serial.println(&quot;Calibrated&nbsp;value:&nbsp;&quot;&nbsp;+&nbsp;String(calibrated_pos));</span><span
+     style='font-size:11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:white;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:#008200'>//&nbsp;&nbsp;delay(100);</span><span style='font-size:
+     11.0pt;font-family:Consolas;color:black'>&nbsp;&nbsp;</span></li>
+ <li class=MsoNormal style='color:#5C5C5C;margin-left:.25in;background:#F8F8F8;
+     border:none;padding:0in'><span style='font-size:11.0pt;font-family:Consolas;
+     color:black'>}&nbsp;&nbsp;</span></li>
+</ol>
+
+</div>
+
+<p class=MsoNormal><span class=MsoSubtleEmphasis>&nbsp;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

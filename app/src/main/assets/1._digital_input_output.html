@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>1. PREREQUISITE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+
+					<h1> 1. GETTING TO KNOW ARDUINO </h1>
+
+					<p></p>
+
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+
+							<header class="major">
+								<h2>Blinking an LED</h2>
+							</header>
+							<p> The LED blinking sketch is the first program that you should run to test
+whether your Arduino board is working and is configured correctly. It is also
+usually the very first programming exercise someone does when learning to program a microcontroller. A light-emitting diode (LED) is a small
+electronic component that’s a bit like a light bulb, but is more efficient and
+requires lower voltages to operate. </p>
+                    
+                    <p>
+                        Your Arduino board comes with an LED preinstalled. It’s marked “L”. You
+can also add your own LED—connect it as shown in Figure.
+If you intend to keep the LED lit for a long period of time, you should
+use a resistor.
+K indicates the cathode (negative), or shorter lead; A indicates the anode
+(positive), or longer lead.
+                    </p>
+                    
+                    <img src="images/1.png" width="100%"></img>
+                
+                <img src="images/2.png" width="100%"></img>
+
+                    <p>
+                        
+                        Now that the code is in your IDE, you need to verify that it is correct. Press
+the “Verify” button; if everything is correct,
+you’ll see the message “Done compiling” appear at the bottom of the
+Arduino IDE. This message means that the Arduino IDE has translated
+your sketch into an executable program that can be run by the board, a
+bit like an .exe file in Windows or an .app file on a Mac.
+At this point, you can upload it into the board: press the Upload to I/O
+Board button. This will reset the board, forcing it to stop
+what it’s doing and listen for instructions coming from the USB port. The
+Arduino IDE sends the current sketch to the board, which will store it in
+                        its memory and eventually run it. </p> <p>
+
+You will see a few messages appear in the black area at the bottom of the
+window, and just above that area, you’ll see the message “Done uploading” appear to let you know the process has completed correctly. There
+are two LEDs, marked RX and TX, on the board; these flash every time
+a byte is sent or received by the board. During the upload process, they
+keep flickering.
+                        
+                        
+                </p>
+
+
+				</div>
+			</section>
+        
+        <!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+
+							<header class="major">
+								<h2>The Code Step By Step</h2>
+							</header>
+                    <p><b> // Example 01 : Blinking LED </b> </p> <p>
+A comment is a useful way for us to write little notes. The preceding title
+comment just reminds us that this program, Example 01, blinks an LED. </p>
+                    
+                    
+                    </p><p>
+                    
+<p>
+    
+   <b> const int LED = 13; // LED connected to
+       // digital pin 13 </b>
+                        </p><p>
+const int means that LED is an integer number that can’t be changed (i.e.
+a constant) whose value is set to 13. It’s like an automatic search and replace for your code; in this case, it’s telling Arduino to write the number 13
+every time the word LED appears. We are using this command to specify
+that the LED we’re blinking is connected to the Arduino pin 13.
+    
+                    </p>
+
+                
+                <p>
+                    void setup()
+This line tells Arduino that the next block of code will be called setup().
+{
+With this opening curly bracket, a block of code begins
+                    
+                </p>
+                
+                <p>
+                    pinMode(LED, OUTPUT); // sets the digital
+// pin as output
+Finally, a really interesting instruction. pinMode tells Arduino how to configure a certain pin. Digital pins can be used either as INPUT or OUTPUT.
+In this case, we need an output pin to control our LED, so we place the
+number of the pin and its mode inside the parentheses.
+pinMode is a function, and the words (or numbers) specified inside the
+parentheses are arguments. INPUT and OUTPUT are constants in the
+Arduino language. (Like variables, constants are assigned values, except
+that constant values are predefined and never change.)
+                    
+                </p>
+                        
+                <p>
+                    }
+This closing curly bracket signifies the end of the setup() function.
+                </p>
+                
+<p>void loop()
+{
+loop() is where you specify the main behaviour of your interactive device.
+It will be repeated over and over again until you switch the board off.
+    
+                </p>
+                
+                <p>
+                    digitalWrite(LED, HIGH); // turns the LED on
+As the comment says, digitalWrite() is able to turn on (or off) any pin that
+has been configured as an OUTPUT. The first argument (in this case, LED)
+specifies which pin should be turned on or off (remember that LED is a
+constant value that refers to pin 13, so this is the pin that’s switched). The
+second argument can turn the pin on (HIGH) or off (LOW).
+                </p>
+                
+                <p>
+                    Imagine that every output pin is a tiny power socket, like the ones you
+have on the walls of your apartment. European ones are 230 V, American
+ones are 110 V, and Arduino works at a more modest 5 V. The magic here
+is when software becomes hardware. When you write digitalWrite(LED,
+HIGH), it turns the output pin to 5 V, and if you connect an LED, it will light
+up. So at this point in your code, an instruction in software makes something happen in the physical world by controlling the flow of electricity to
+the pin. Turning on and off the pin at will now let us translate these into
+something more visible for a human being; the LED is our actuator.
+                </p>
+                
+                <p>
+                    delay(1000); // waits for a second
+Arduino has a very basic structure. Therefore, if you want things to happen
+with a certain regularity, you tell it to sit quietly and do nothing until it is
+time to go to the next step. delay() basically makes the processor sit
+there and do nothing for the amount of milliseconds that you pass as
+an argument. Milliseconds are thousandths of seconds; therefore, 1000
+milliseconds equals 1 second. So the LED stays on for one second here.
+                    
+                </p>
+                
+                
+                <p>
+                    digitalWrite(LED, LOW); // turns the LED off
+This instruction now turns off the LED that we previously turned on. Why
+do we use HIGH and LOW? Well, it’s an old convention in digital electronics.
+HIGH means that the pin is on, and in the case of Arduino, it will be set at
+5 V. LOW means 0 V. You can also replace these arguments mentally with
+ON and OFF.
+                    
+                </p>
+                
+                <p>
+                    delay(1000); // waits for a second
+Here, we delay for another second. The LED will be off for one second.
+}
+This closing curly bracket marks end of the loop function.
+                    
+                </p>
+
+
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<section id="footer">
+
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

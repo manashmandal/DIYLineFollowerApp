@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+
+    <item android:id="@+id/about" android:title="@string/about"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/license" android:title="LICENSE-MIT"
+        android:orderInCategory="100"
+        app:showAsAction = "never"
+        />
+
+    <item android:id="@+id/source_code_and_reference" android:title="Source and References"
+        android:orderInCategory="100"
+        app:showAsAction = "never"
+        />
+
+
+</menu>

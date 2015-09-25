@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>1. PREREQUISITE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+
+					<h1> 2. PULSE WIDTH MODULATION </h1>
+
+					<p></p>
+
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+
+							<header class="major">
+								<h2>Controlling Light with PWM</h2>
+							</header>
+							<p> if you change the numbers in the delay function until you don’t see the LED blinking any more,
+you will notice that the LED seems to be dimmed at 50% of its normal
+brightness. Now change the numbers so that the LED is on is one quarter
+of the time that it’s off. Run the sketch and you’ll see that the brightness
+is roughly 25%. This technique is called pulse width modulation (PWM),
+a fancy way of saying that if you blink the LED fast enough, you don’t see
+it blink any more, but you can change its brightness by changing the ratio
+between the on time and the off time. </p>
+                    
+                    <p>
+                        This technique also works with devices other than an LED. For example,
+you can change the speed of a motor in the same way.
+While experimenting, you will see that blinking the LED by putting delays
+in your code is a bit inconvenient, because as soon as you want to read a
+sensor or send data on the serial port, the LED will flicker while it’s waiting
+for you to finish reading the sensor. Luckily, the processor used by the
+Arduino board has a piece of hardware that can very efficiently blink three
+LEDs while your sketch does something else. This hardware is implemented in pins 9, 10, and 11, which can be controlled by the analogWrite()
+instruction
+                    </p>
+                    
+                    <img src="images/3.png" width="100%"> </img>
+                
+                    
+                    <p>
+                        For example, writing analogWrite(9,128) will set the brightness of an LED connected to pin 9 to 50%. Why 128? analogWrite() expects a number between 0
+and 255 as an argument, where 255 means full brightness and 0 means off.
+NOTE: Having three channels is very good, because if you buy red,
+green, and blue LEDs, you can mix their lights and make light of any
+                        colour that you like! </p> <p>
+Let’s try it out. Build the circuit that you see in Figure. Note that LEDs
+are polarized: the long pin (positive) should go to the right, and the short
+pin (negative) to the left. Also, most LEDs have a flattened negative side,
+as shown in the figure. Use a 270 ohm resistor (red violet brown).
+                        
+                    </p>
+                    
+                                 <img src="images/4.png" width="100%"> </img>
+            
+        
+        <img src="images/5.png" width="100%"> </img>
+
+
+				</div>
+			</section>
+
+
+
+<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+
+							<header class="major">
+								<h2>Controlling Motor using Motor Driver and PWM</h2>
+							</header>
+							<p> 
+                    An H-Bridge can control two brushed motors. Figure shows the connections for
+the L293D H-Bridge IC; you can also use the SN754410, which has the same pin layout
+                    </p>
+                    
+                    
+                    
+                    <img src="images/6.png" width="100%"> </img>
+                
+                    
+          
+                                 <img src="images/7.png" width="100%"> </img>
+            
+        
+        <img src="images/8.png" width="100%"> </img>
+
+
+				</div>
+			</section>
+        
+        
+      
+
+
+		<!-- Footer -->
+			<section id="footer">
+
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>1. PREREQUISITE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+
+					<h1> 3. Analog To Digital Conversion (ADC) </h1>
+
+					<p></p>
+
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+
+							<header class="major">
+								<h2>Detecting the Change in Light using ADC and LDR</h2>
+							</header>
+							<p> You want to detect changes in light levels. You may want to detect a change when
+something passes in front of a light detector or to measure the light level—for example,
+detecting when a room is getting too dark. </p>
+                    
+                    <p>The easiest way to detect light levels is to use a light dependent resistor (LDR). This
+changes resistance with changing light levels, and when connected in the circuit shown
+in Figure it produces a change in voltage that the Arduino analog input pins can
+                        sense.</p>
+                    
+                
+                    
+                    <img src="images/12.png" width="100%"> </img>
+                <img src="images/13.png" width="100%"> </img>
+        <img src="images/14.png" width="100%"> </img>
+                
+                
+                <p>
+                        The circuit for this recipe is the standard way to use any sensor that changes its resistance based on some physical phenomenon . The voltage on analog
+pin 0 changes as the resistance of the LDR changes with varying light levels.
+A circuit such as this will not give the full range of possible values from the analog
+input—0 to 1,023—as the voltage will not be swinging from 0 volts to 5 volts. This is
+because there will always be a voltage drop across each resistance, so the voltage where
+they meet will never reach the limits of the power supply. When using sensors such as
+these, it is important to check the actual values the device returns in the situation you
+will be using it. Then you have to determine how to convert them to the values you
+need to control whatever you are going to control.
+                    
+                    
+                </p> <p>
+The LDR is a simple kind of sensor called a resistive sensor. A range of resistive sensors
+respond to changes in different physical characteristics. Similar circuits will work for
+other kinds of simple resistive sensors, although you may need to adjust the resistor to
+suit the sensor.
+                
+                </p> <p>
+Choosing the best resistor value depends on the LDR you are using and the range of
+light levels you want to monitor. Engineers would use a light meter and consult the
+data sheet for the LDR, but if you have a multimeter, you can measure the resistance
+of the LDR at a light level that is approximately midway in the range of illumination
+you want to monitor. Note the reading and choose the nearest convenient resistor to
+this value.    
+                    
+                </p>
+                
+                
+                
+          
+
+
+				</div>
+			</section>
+
+
+
+
+
+
+		<!-- Footer -->
+			<section id="footer">
+
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

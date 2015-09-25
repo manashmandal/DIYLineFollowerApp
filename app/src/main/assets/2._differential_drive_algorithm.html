@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>1. PREREQUISITE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+
+					<h1> 2. Differential Drive Algorithm </h1>
+
+					<p>
+                        This is the most simplest algorithm for an Autonomous Line Following Robot
+                        
+                    </p>
+                    
+              
+
+                    
+                    
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+
+							
+					<header class="major">
+								<h2>Differentiate Between the line and the Surface</h2>
+							</header>
+                    
+                    <p>
+                       To differentiate between the line and the surface we have to take a threshold value of the sensor. And you can use Arduino USB Debugging to find out the value. The process is quite simple. Take reading on the line and then take reading on the surface, note them down. Then turn on all your sensors on the array and take several reading if all are giving approximately same value on same surface. If not, try to change the surface and see what happens.
+                        
+                    
+                    </p>
+                    
+                    
+                    <p>
+                        For me, on the BLACK LINE the IR gave a value about less than 100 and on the WHITE SURFACE it gave the value about more than 500. And all of my sensor gave the same approximate value.
+                        
+                        
+                    </p>
+                    
+                    
+                    <p> In case something goes wrong, I took my threshold about 300 and gave a condition that if any of the IR sensor on the array detects more than 300 then the arduino will record the value of the sensor as 0 and if less than 300 it will record as 1.
+                        
+                    </p>
+                    
+                    <header class="major">
+								<h2>Calculate bot Position and Drive according to the position</h2>
+							</header>
+                    
+                    <p>
+                        So for 7 sensors, I get a reading like 0011100 then I can easily assume that my bot is on the right track. [ FAR Left IR ->0 01110 0 <- FAR Right IR readings ]. And if i detect that position I would go forward!
+                        
+                    </p>
+                        
+                        <p>
+                        But wait, there will be twists and turns on the track so I can not possibly tell if 0011100 will always be true! It can also be 0111000 and 0001110 and many other variations. It would be a stupid thing to do to assign the pattern with direction so we have to re think a bit.    
+                            
+                    </p>
+                    
+                    
+                    <p> In order to get the highest possible location of our bot we have to take these steps:
+                        <ul>
+                            <li> Get the pattern, let's say we got 0001100 </li>
+                            <li> Take a variable and put the sum of product of index and weighted value, let's assume weight is 1000, so for the mentioned pattern:
+                                <br />
+                                weighted_value = (index) * (weight) * (isActive 0 or 1);
+                                <br />
+                                weightedValue = 0 * 1000 * 0 + 1 * 1000 * 0 + 2 * 1000 * 0 + 3 * 1000 * 1 + ..... ; // you'll get the idea
+                            </li>
+                            
+                            <li> Now divide the whole weighted value by the number of active sensors to get the position<br />
+                                So the position will be, <br /> 
+                                position = weightedValue / number_of_active_sensors; </li>
+                             
+                            <li>
+                                Okay we are nearly there, we just have to do logical thinking to use the position into our advantage. 
+                                
+                                <br/>
+                                
+                                For 7 sensors, 3 middle sensors [pattern 0 0 1 1 1 0 0] on the line the position will be = (2 * 1000 + 3 * 1000 + 4 * 1000) / 3 = 3000. <br/>
+                                
+                                So when the position value around 3000 we can say the bot is on the accurate position. And when it is on the middle of the line it can go forward.  
+                            </li>
+                            
+                            <li>
+                                When the line takes a right turn it means the left sensor will not receive or may receive slight reading but the weighted value will always point to the right and vice versa. <br />
+                                
+                                For Right Turn we can either slow down the right motor or speed up the left motor. <br /> For Left turn we can either slow down  the left motor or speed up the right motor.
+                                
+                                
+                            </li>
+                             
+                            
+                            
+                            
+                    </ul>
+                        
+                        
+                        
+                    </p>
+          
+
+
+				</div>
+			</section>
+
+
+
+
+
+
+		<!-- Footer -->
+			<section id="footer">
+
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
