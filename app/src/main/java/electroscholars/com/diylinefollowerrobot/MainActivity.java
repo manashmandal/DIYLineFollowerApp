@@ -131,21 +131,14 @@ public class MainActivity extends Activity {
         CharSequence text6 = "Check My Projects @ http://github.com/manashmndl";
         CharSequence text7 = "Check out my blog @ http://medialab.electroscholars.com";
         CharSequence text8 = "Thank you for Using This App";
-        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
-        toast.show();
-        Toast toast2 = Toast.makeText(this, text2, Toast.LENGTH_SHORT);
-        toast2.show();
-        Toast toast3 = Toast.makeText(this, text3, Toast.LENGTH_SHORT);
-        toast3.show();
-        Toast toast4 = Toast.makeText(this, text4, Toast.LENGTH_SHORT);
-        toast4.show();
-        Toast toast5 = Toast.makeText(this, text5, Toast.LENGTH_SHORT);
-        toast5.show();
-        Toast toast6 = Toast.makeText(this, text6, Toast.LENGTH_LONG);
-        toast6.show();
-        Toast toast7 = Toast.makeText(this, text7, Toast.LENGTH_LONG);
-        toast7.show();
-        Toast toast8 = Toast.makeText(this, text8, Toast.LENGTH_LONG);
-        toast8.show();
+        
+        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, text2, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, text3, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, text4, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, text5, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, text6, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, text7, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, text8, Toast.LENGTH_LONG).show();
     }
 }
